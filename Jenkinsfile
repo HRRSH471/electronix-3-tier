@@ -1,15 +1,21 @@
 pipeline {
-    agent { label 'electronix'}
+    agent {
+        label 'electronix'
+    }
 
-    stages{
-        stage("I am from Electronix"){
-           steps("Helloer from electronix")
+    stages {
+
+        stage('I am from Electronix') {
+            steps {
+                echo 'Hello from Electronix 🚀'
+            }
         }
-        stage("Electronix Setup"){
-            steps {echo "Electronix Setup is Working ✅"}
+
+        stage('Electronix Setup') {
+            steps {
+                echo 'Electronix Setup is Working ✅'
+            }
         }
-
-
 
     }
 }
