@@ -5,7 +5,7 @@ pipeline {
         stage("Tools Configure"){
             steps{ echo "Tools Installation pipeline" }
         }
-        stage ("List Update"){
+        stage ("List Updated"){
             steps{
                 sh '''
                 sudo apt-get update -y
