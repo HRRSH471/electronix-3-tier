@@ -1,8 +1,18 @@
 pipeline {
+<<<<<<< HEAD
     agent { label 'electronix' }
    
     stages{
         stage("Provision Node.js Runtime"){
+=======
+    agent {label 'electronix'}
+    
+    stages {
+        stage("Tools Configure"){
+            steps{ echo "Tools Installation pipeline" }
+        }
+        stage ("List Updated"){
+>>>>>>> cfdae6826f413c3b793325a3e5e72ab690186b36
             steps{
                 sh '''
                 if ! command -v node &> /dev/null;then
@@ -18,6 +28,7 @@ pipeline {
                 '''
             }
         }
+<<<<<<< HEAD
 
         stage("Provision Docker Engine"){
             steps{
@@ -57,3 +68,7 @@ pipeline {
     } 
 
 }
+=======
+    }
+}
+>>>>>>> cfdae6826f413c3b793325a3e5e72ab690186b36
