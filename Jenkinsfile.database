@@ -8,14 +8,14 @@ pipeline {
 
     }
 
-        stage('Smoke Test') {
+        stage('Smoke Testing') {
             steps{
             sh 'python3 scripts/smoke_test.py'
             }
         }
     }
 
-    postv{
+    post{
         success {
             echo 'Database Creation Successfull'
 
